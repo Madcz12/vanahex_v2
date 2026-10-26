@@ -1,0 +1,8 @@
+export { HeroSection } from './HeroSection'
+export { ServicesSection } from './ServicesSection'
+export { ProjectCasesSection } from './ProjectCasesSection'
+export { WhatsAppSection } from './WhatsAppSection'
+export { PricingSection } from './PricingSection'
+export { DirectorySection } from './DirectorySection'
+export { ContactSection } from './ContactSection'
+export { FooterSection } from './FooterSection'

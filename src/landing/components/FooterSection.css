@@ -1,0 +1,15 @@
+/* Footer Section */
+.vx-footer {
+  background: #070a14;
+  border-top: 1px solid var(--vx-border);
+}
+
+.vx-footer-link {
+  color: var(--vx-text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.vx-footer-link:hover {
+  color: var(--vx-accent-mint);
+}

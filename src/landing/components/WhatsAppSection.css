@@ -1,0 +1,85 @@
+/* WhatsApp Section */
+.vx-whatsapp-section {
+  background: var(--vx-bg-secondary);
+  border-top: 1px solid var(--vx-border);
+  border-bottom: 1px solid var(--vx-border);
+}
+
+.vx-wa-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-chat-mockup {
+  background: #0f1526;
+  border: 1px solid var(--vx-border);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.vx-chat-header {
+  background: #141c30;
+  border-bottom: 1px solid var(--vx-border);
+}
+
+.vx-chat-avatar {
+  width: 38px;
+  height: 38px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-chat-body {
+  height: 250px;
+  overflow-y: auto;
+  background: #0a0e1a;
+}
+
+.vx-chat-bubble {
+  max-width: 85%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.vx-chat-bubble.bot {
+  background: #1e293b;
+  color: #fff;
+  border: 1px solid var(--vx-border);
+  border-top-left-radius: 2px !important;
+}
+
+.vx-chat-bubble.user {
+  background: #065f46;
+  color: #fff;
+  border-top-right-radius: 2px !important;
+}
+
+.vx-chat-footer {
+  background: #141c30;
+  border-top: 1px solid var(--vx-border);
+}
+
+.vx-quick-btn {
+  background: #1e293b;
+  border: 1px solid var(--vx-border);
+  color: #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vx-quick-btn:hover {
+  background: rgba(45, 212, 168, 0.15);
+  border-color: var(--vx-accent-mint);
+  color: #fff;
+}

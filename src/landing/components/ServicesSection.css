@@ -1,0 +1,39 @@
+/* Services Section */
+.vx-services-section {
+  background: var(--vx-bg-secondary);
+  border-top: 1px solid var(--vx-border);
+  border-bottom: 1px solid var(--vx-border);
+}
+
+.max-w-750 {
+  max-width: 750px;
+}
+
+.vx-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(251, 191, 36, 0.1);
+  color: var(--vx-accent-yellow);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.vx-tpv-banner {
+  background: #131a2e;
+  border: 1px solid var(--vx-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.vx-mini-plan {
+  background: #0a0e1a;
+  border: 1px solid var(--vx-border);
+  transition: all 0.2s ease;
+}
+
+.vx-mini-plan.highlighted {
+  border-color: var(--vx-accent-yellow);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.15);
+}

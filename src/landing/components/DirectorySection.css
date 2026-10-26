@@ -1,0 +1,42 @@
+/* Directory Section */
+.vx-directory-section {
+  background: var(--vx-bg-secondary);
+  border-top: 1px solid var(--vx-border);
+  border-bottom: 1px solid var(--vx-border);
+}
+
+.vx-filter-pill {
+  background: #0f1526;
+  border: 1px solid var(--vx-border);
+  color: var(--vx-text-secondary);
+  padding: 6px 16px;
+  border-radius: var(--vx-radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vx-filter-pill:hover,
+.vx-filter-pill.active {
+  background: rgba(45, 212, 168, 0.15);
+  border-color: var(--vx-accent-mint);
+  color: #fff;
+}
+
+.vx-directory-card {
+  background: #0f1526;
+  border: 1px solid var(--vx-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.vx-directory-card:hover {
+  border-color: rgba(45, 212, 168, 0.3);
+  transform: translateY(-4px);
+}
+
+.vx-directory-services {
+  background: #0a0e1a;
+  border: 1px solid var(--vx-border);
+}

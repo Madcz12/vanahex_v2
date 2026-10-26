@@ -1,0 +1,41 @@
+/* Project Cases Section */
+.vx-cases-section {
+  background: var(--vx-bg-primary);
+}
+
+.vx-case-card {
+  background: #0f1526;
+  border: 1px solid var(--vx-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.vx-case-card:hover {
+  border-color: rgba(45, 212, 168, 0.3);
+}
+
+.vx-case-preview {
+  background: #141c30;
+  border: 1px solid var(--vx-border);
+}
+
+.vx-case-inner-content {
+  background: #0a0e1a;
+  border: 1px solid var(--vx-border);
+}
+
+.vx-stat-box {
+  background: #0a0e1a;
+  border: 1px solid var(--vx-border);
+}
+
+.extra-small {
+  font-size: 0.72rem;
+  line-height: 1.1;
+  display: block;
+}
+
+.vx-web-screen-preview {
+  background: #0a0e1a;
+  border: 1px dashed var(--vx-border);
+}
