@@ -29,7 +29,7 @@ export const Navbar = () => {
       {/* Floating Island Pill Navbar */}
       <div className="vx-pill-nav">
         {/* Brand */}
-        <a href="#" className="vx-pill-brand" onClick={closeAll}>
+        <a href="/" className="vx-pill-brand" onClick={closeAll}>
           <div className="vx-brand-icon">
             <i className="bi bi-lightning-charge-fill"></i>
           </div>
@@ -42,6 +42,8 @@ export const Navbar = () => {
         <nav className="vx-desktop-menu">
           <ul className="vx-menu-list">
             {navLinks.map((link) => {
+              const resolveHref = (href) => (href.startsWith('#') ? `/${href}` : href)
+
               if (link.hasDropdown) {
                 return (
                   <li
@@ -66,7 +68,7 @@ export const Navbar = () => {
                         {link.children.map((subItem) => (
                           <a
                             key={subItem.label}
-                            href={subItem.href}
+                            href={resolveHref(subItem.href)}
                             className="vx-mega-item"
                             onClick={closeAll}
                           >
@@ -91,7 +93,7 @@ export const Navbar = () => {
 
               return (
                 <li key={link.label} className="vx-menu-item">
-                  <a href={link.href} className="vx-menu-link" onClick={closeAll}>
+                  <a href={resolveHref(link.href)} className="vx-menu-link" onClick={closeAll}>
                     {link.label}
                   </a>
                 </li>
@@ -102,7 +104,7 @@ export const Navbar = () => {
 
         {/* Right Action */}
         <div className="vx-pill-actions">
-          <a href="#contacto" className="vx-action-btn" onClick={closeAll}>
+          <a href="/#contacto" className="vx-action-btn" onClick={closeAll}>
             Hablemos
           </a>
 
@@ -131,7 +133,7 @@ export const Navbar = () => {
                       {link.children.map((sub) => (
                         <a
                           key={sub.label}
-                          href={sub.href}
+                          href={sub.href.startsWith('#') ? `/${sub.href}` : sub.href}
                           className="vx-mobile-sublink"
                           onClick={closeAll}
                         >
@@ -145,14 +147,18 @@ export const Navbar = () => {
                     </div>
                   </div>
                 ) : (
-                  <a href={link.href} className="vx-mobile-link" onClick={closeAll}>
+                  <a
+                    href={link.href.startsWith('#') ? `/${link.href}` : link.href}
+                    className="vx-mobile-link"
+                    onClick={closeAll}
+                  >
                     {link.label}
                   </a>
                 )}
               </li>
             ))}
             <li className="vx-mobile-item pt-2">
-              <a href="#contacto" className="vx-btn vx-btn-mint w-100 justify-content-center" onClick={closeAll}>
+              <a href="/#contacto" className="vx-btn vx-btn-mint w-100 justify-content-center" onClick={closeAll}>
                 Activar Negocio
               </a>
             </li>

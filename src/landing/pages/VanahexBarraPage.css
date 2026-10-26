@@ -1,0 +1,345 @@
+/* =========================================
+   VANAHEX V2 — Case Study: VANAHEX Barra
+   Includes Masonry Grid & Lightbox
+   ========================================= */
+
+.vx-case-study-page {
+  background-color: var(--vx-bg-primary);
+  min-height: 100vh;
+}
+
+.vx-case-page-content {
+  padding-top: 130px;
+}
+
+@media (max-width: 991px) {
+  .vx-case-page-content {
+    padding-top: 100px;
+  }
+}
+
+/* ---------- Back Breadcrumb Link ---------- */
+.vx-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--vx-text-secondary);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 6px 14px;
+  border-radius: var(--vx-radius-pill, 9999px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--vx-border);
+}
+
+.vx-back-link:hover {
+  color: var(--vx-accent-mint);
+  border-color: rgba(45, 212, 168, 0.4);
+  transform: translateX(-3px);
+}
+
+/* ---------- Hero Section ---------- */
+.vx-case-hero-section {
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.vx-case-hero-desc {
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+/* Demo PIN Callout */
+.vx-demo-pin-callout {
+  background: rgba(15, 21, 38, 0.85);
+  border: 1px dashed rgba(45, 212, 168, 0.4);
+  border-radius: var(--vx-radius-md, 12px);
+  padding: 12px 18px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.vx-demo-pin-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vx-pin-tag {
+  font-size: 0.82rem;
+  background: rgba(45, 212, 168, 0.1);
+  color: #2dd4a8;
+  padding: 4px 10px;
+  border-radius: var(--vx-radius-pill, 9999px);
+  border: 1px solid rgba(45, 212, 168, 0.25);
+}
+
+.vx-pin-tag strong {
+  color: #ffffff;
+}
+
+/* Case Client Stats Card */
+.vx-case-stats-card {
+  background: var(--vx-bg-card, #131a2e);
+  border: 1px solid var(--vx-border);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.vx-case-client-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(45, 212, 168, 0.15);
+  color: var(--vx-accent-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid rgba(45, 212, 168, 0.3);
+}
+
+.vx-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vx-stat-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ---------- 4 Pillars Cards ---------- */
+.vx-pillar-card {
+  background: var(--vx-bg-card, #131a2e);
+  border: 1px solid var(--vx-border);
+  transition: all 0.3s ease;
+}
+
+.vx-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(45, 212, 168, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.vx-pillar-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.bg-mint-subtle {
+  background: rgba(45, 212, 168, 0.12);
+}
+.text-mint {
+  color: #2dd4a8 !important;
+}
+
+.bg-yellow-subtle {
+  background: rgba(245, 158, 11, 0.12);
+}
+.text-yellow {
+  color: #fbbf24 !important;
+}
+
+.bg-blue-subtle {
+  background: rgba(59, 130, 246, 0.12);
+}
+.text-blue {
+  color: #38bdf8 !important;
+}
+
+.bg-purple-subtle {
+  background: rgba(139, 92, 246, 0.12);
+}
+.text-purple {
+  color: #a78bfa !important;
+}
+
+/* ---------- Masonry Grid Gallery ---------- */
+.vx-masonry-section {
+  background: #0b101f;
+  border-top: 1px solid var(--vx-border);
+  border-bottom: 1px solid var(--vx-border);
+}
+
+.vx-masonry-grid {
+  column-count: 2;
+  column-gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .vx-masonry-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+
+.vx-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 28px;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.vx-masonry-card {
+  background: var(--vx-bg-card, #131a2e);
+  border: 1px solid var(--vx-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.vx-masonry-item:hover .vx-masonry-card {
+  border-color: rgba(45, 212, 168, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(45, 212, 168, 0.15);
+}
+
+.vx-masonry-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #070a12;
+}
+
+.vx-masonry-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-masonry-item:hover .vx-masonry-img {
+  transform: scale(1.03);
+}
+
+.vx-masonry-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 14, 26, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vx-masonry-item:hover .vx-masonry-hover-overlay {
+  opacity: 1;
+}
+
+.vx-zoom-pill {
+  background: rgba(15, 21, 38, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: var(--vx-radius-pill, 9999px);
+  border: 1px solid rgba(45, 212, 168, 0.5);
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.vx-masonry-item:hover .vx-zoom-pill {
+  transform: translateY(0);
+}
+
+.vx-masonry-caption {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- CTA Banner ---------- */
+.vx-case-cta-banner {
+  background: linear-gradient(135deg, #131a2e 0%, #0c1222 100%);
+  border: 1px solid rgba(45, 212, 168, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Lightbox Modal ---------- */
+.vx-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 14, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.vx-lightbox-dialog {
+  max-width: 1040px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: #0f1526;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+  animation: scaleUp 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(15, 21, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.vx-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.vx-lightbox-img-box {
+  background: #060911;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.vx-lightbox-img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+
+.vx-lightbox-info {
+  background: #0f1526;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
