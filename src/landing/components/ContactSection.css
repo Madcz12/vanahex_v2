@@ -1,15 +1,16 @@
 /* Contact Section */
 .vx-contact-section {
-  background: var(--vx-bg-primary);
+  background: transparent;
 }
 
 .vx-form-card {
-  background: #0f1526;
+  background: var(--vx-bg-card);
   border: 1px solid var(--vx-border);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(34, 211, 238, 0.05);
 }
 
 .vx-input {
-  background: #0a0e1a;
+  background: var(--vx-bg-primary);
   border: 1px solid var(--vx-border);
   color: #fff;
   padding: 12px 16px;
@@ -17,19 +18,19 @@
 }
 
 .vx-input:focus {
-  background: #0a0e1a;
-  border-color: var(--vx-accent-mint);
+  background: var(--vx-bg-primary);
+  border-color: var(--vx-accent-cyan, #22d3ee);
   color: #fff;
-  box-shadow: 0 0 10px rgba(45, 212, 168, 0.2);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.25);
 }
 
 .vx-input option {
-  background: #0a0e1a;
+  background: var(--vx-bg-primary);
   color: #fff;
 }
 
 .vx-pay-option {
-  background: #0a0e1a;
+  background: var(--vx-bg-primary);
   border: 1px solid var(--vx-border);
   cursor: pointer;
   transition: all 0.2s ease;

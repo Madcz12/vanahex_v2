@@ -56,7 +56,7 @@ export const HeroSection = () => {
                 <i className="bi bi-rocket-takeoff-fill"></i>
                 Activar Negocio
               </a>
-              <a href="#servicios" className="vx-btn vx-btn-primary px-4 py-3 fs-6 fw-bold">
+              <a href="#casos" className="vx-btn vx-btn-primary px-4 py-3 fs-6 fw-bold">
                 <i className="bi bi-play-circle-fill"></i>
                 Probar Demo en Vivo
               </a>

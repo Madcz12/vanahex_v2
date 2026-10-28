@@ -21,13 +21,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  background: rgba(13, 18, 35, 0.82);
+  background: rgba(11, 16, 29, 0.85);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.18);
   border-radius: 9999px;
   padding: 6px 10px 6px 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 18px rgba(34, 211, 238, 0.08);
   max-width: 960px;
   width: auto;
 }
@@ -125,13 +125,13 @@
   top: calc(100% + 14px);
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
-  background: rgba(11, 16, 32, 0.96);
+  background: rgba(11, 16, 29, 0.96);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.18);
   border-radius: 20px;
   padding: 22px 24px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 20px rgba(45, 212, 168, 0.05);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 20px rgba(34, 211, 238, 0.08);
   min-width: 540px;
   opacity: 0;
   visibility: hidden;
@@ -239,11 +239,11 @@
   top: calc(100% + 12px);
   left: 16px;
   right: 16px;
-  background: #0f1526;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0e1526;
+  border: 1px solid rgba(34, 211, 238, 0.18);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(34, 211, 238, 0.06);
 }
 
 .vx-mobile-list {

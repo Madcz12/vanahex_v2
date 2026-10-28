@@ -1,10 +1,10 @@
 /* Pricing Section */
 .vx-pricing-section {
-  background: var(--vx-bg-primary);
+  background: transparent;
 }
 
 .vx-pricing-card {
-  background: #0f1526;
+  background: var(--vx-bg-card);
   border: 1px solid var(--vx-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
@@ -12,8 +12,8 @@
 }
 
 .vx-pricing-card.highlight {
-  border-color: var(--vx-accent-mint);
-  box-shadow: 0 0 35px rgba(45, 212, 168, 0.18);
+  border-color: var(--vx-accent-cyan, #22d3ee);
+  box-shadow: 0 0 35px rgba(34, 211, 238, 0.2);
   transform: scale(1.02);
 }
 

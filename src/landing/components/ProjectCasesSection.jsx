@@ -61,17 +61,13 @@ export const ProjectCasesSection = () => {
   }
 
   return (
-    <section id="casos" className="vx-section vx-cases-carousel-section">
-      {/* Top Header matching reference image */}
+    <section id="casos" className="vx-section vx-cases-carousel-section position-relative">
+      <div id="servicios" className="position-absolute" style={{ top: '-80px' }}></div>
+      {/* Top Header */}
       <div className="container text-center mb-4 mb-lg-5">
-        <div className="d-inline-flex align-items-center mb-3">
-          <span className="vx-pill-badge">
-            Things I've Built
-          </span>
-        </div>
-        <p className="vx-carousel-subtitle mb-0">
-          Featured work and side projects
-        </p>
+        <h2 className="vx-cases-section-title vx-heading vx-heading-lg vx-font-body text-white mb-0">
+          Casos de Éxito
+        </h2>
       </div>
 
       {/* Panoramic Carousel Container */}

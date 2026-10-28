@@ -7,11 +7,11 @@
 export const navLinks = [
   {
     label: 'Servicios',
-    href: '#servicios',
+    href: '#casos',
     hasDropdown: true,
     children: [
-      { label: 'TPV Hostelería', href: '#servicios', dotColor: '#3b82f6', desc: 'Comandas en móvil, QR de mesa y carta en vivo' },
-      { label: 'TPV Tienda & Retail', href: '#servicios', dotColor: '#8b5cf6', desc: 'Inventario, stock y control de caja' },
+      { label: 'TPV Hostelería', href: '/casos/vanahex-barra', dotColor: '#3b82f6', desc: 'Comandas en móvil, QR de mesa y carta en vivo' },
+      { label: 'TPV Tienda & Retail', href: '#casos', dotColor: '#8b5cf6', desc: 'Inventario, stock y control de caja' },
       { label: 'Web Propia a Medida', href: '#casos', dotColor: '#2dd4a8', desc: 'Tu sitio web profesional con tu propia marca' },
       { label: 'Bot WhatsApp 24/7', href: '#bot-whatsapp', dotColor: '#06b6d4', desc: 'Agenda citas y atiende clientes de forma autónoma' },
       { label: 'Directorio Global', href: '#directorio', dotColor: '#f59e0b', desc: 'Presencia en la red internacional de comercios' },
@@ -137,7 +137,7 @@ export const projectCases = [
     tagColor: 'yellow',
     title: 'MS Barbershop Madrid',
     slug: 'barberia',
-    caseUrl: '/casos/vanahex-barra',
+    caseUrl: '/casos/ms-barbershop',
     demoUrl: 'https://vanahex.lat/barberia.html',
     location: 'Calle Gran Vía 42, Madrid',
     desc: 'Este negocio ya utiliza la infraestructura de VANAHEX: su software de caja, su Bot de WhatsApp autónomo y su sitio web oficial propio.',
@@ -161,14 +161,14 @@ export const projectCases = [
   {
     tag: 'PROYECTO PROPIO · EN PRODUCCIÓN',
     tagColor: 'purple',
-    title: 'Vanaheim WoW',
+    title: 'Vanaheim: plataforma de juegos online',
     slug: 'vanaheim',
     caseUrl: '/casos/vanahex-barra',
     demoUrl: 'https://wow-vanaheim.com',
     location: null,
     desc: 'Diseñada, programada y operada por el equipo de VANAHEX desde julio de 2026. Es nuestra prueba de fuego: una comunidad con cientos de usuarios que cada semana usa todo lo que ofrecemos.',
     subtitle: 'Comunidad masiva, tienda virtual y servidores cloud 24/7',
-    image: '/synapse_imagen.webp',
+    image: '/wow_vanaheim/vanaheim_wow_background.webp',
     imageAlt: 'Vanaheim WoW - Plataforma de juego online',
     url: 'https://wow-vanaheim.com',
     urlLabel: 'Ver la plataforma en vivo',
@@ -195,13 +195,13 @@ export const projectCases = [
     title: 'FDS Melilla',
     slug: 'fds-melilla',
     caseUrl: '/casos/vanahex-barra',
-    demoUrl: 'https://fdsmelilla.vanahex.lat',
+    demoUrl: 'https://fdsmelilla.vanahex.lat/',
     location: 'C/ de la Violeta 14, Nave 7, Melilla',
     desc: 'Empresa de climatización y obras de Melilla: instalación y mantenimiento de aire acondicionado para particulares y empresas, reformas y rehabilitación de fachadas.',
     subtitle: 'Climatización industrial, reformas y captación directa por WhatsApp',
-    image: '/synapse_imagen.webp',
+    image: '/fds_melilla/melilla_img.webp',
     imageAlt: 'FDS Melilla - Web corporativa y captación',
-    url: 'https://fdsmelilla.vanahex.lat',
+    url: 'https://fdsmelilla.vanahex.lat/',
     urlLabel: 'Ver la web de FDS Melilla',
     badgeLabel: 'Web en vivo',
     highlights: [
@@ -251,7 +251,7 @@ export const directoryClients = [
 
 /** Footer link list */
 export const footerLinks = [
-  { label: 'Sectores', href: '#servicios' },
+  { label: 'Sectores', href: '#casos' },
   { label: 'Web Barbería', href: '#casos' },
   { label: 'Web Propia', href: '#web-propia' },
   { label: 'Precios', href: '#planes' },

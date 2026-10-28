@@ -2,9 +2,8 @@ import React from 'react'
 import { Navbar } from '../../ui'
 import {
   HeroSection,
-  ServicesSection,
-  WhatsAppSection,
   ProjectCasesSection,
+  WhatsAppSection,
   PricingSection,
   DirectorySection,
   ContactSection,
@@ -17,9 +16,8 @@ export const LandingPage = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <ServicesSection />
-        <WhatsAppSection />
         <ProjectCasesSection />
+        <WhatsAppSection />
         <PricingSection />
         <DirectorySection />
         <ContactSection />

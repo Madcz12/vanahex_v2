@@ -1,0 +1,662 @@
+/* ==========================================================================
+   VANAHEX V2 — Case Study: MS Barbershop Madrid
+   Theme: Mustard Yellow & Rich Bronze Palette
+   Includes Masonry Grid with Visual Placeholders & Fullscreen Lightbox
+   ========================================================================== */
+
+:root {
+  --vx-barber-mustard: #e5a919;
+  --vx-barber-mustard-glow: rgba(229, 169, 25, 0.22);
+  --vx-barber-bronze: #cd7f32;
+  --vx-barber-bronze-dark: #8c4d16;
+  --vx-barber-gold-light: #fbe38e;
+  --vx-barber-gold: #f4c542;
+  --vx-barber-gold-text: #f7df94;
+  --vx-barber-bronze-text: #dfa265;
+  --vx-barber-champagne: #faedd0;
+  --vx-barber-muted: #bfa588;
+  --vx-barber-border: rgba(212, 175, 55, 0.22);
+  --vx-barber-border-hover: rgba(229, 169, 25, 0.55);
+}
+
+/* Base Page Wrapper */
+.vx-barbershop-page,
+.vx-barbershop-page.vx-landing-wrapper {
+  background-color: #140d05 !important;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(229, 169, 25, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 10% 65%, rgba(205, 127, 50, 0.04) 0%, transparent 55%),
+    linear-gradient(180deg, #140d05 0%, #191208 40%, #140d05 100%) !important;
+  box-shadow: none !important;
+  min-height: 100vh;
+  color: var(--vx-barber-champagne);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.vx-barber-page-content {
+  padding-top: 130px;
+}
+
+@media (max-width: 991px) {
+  .vx-barber-page-content {
+    padding-top: 100px;
+  }
+}
+
+/* ---------- Text & Accents in Gold & Bronze ---------- */
+.text-barber-gold {
+  color: var(--vx-barber-gold-text) !important;
+}
+
+.text-barber-bronze {
+  color: var(--vx-barber-bronze-text) !important;
+}
+
+.text-barber-muted {
+  color: var(--vx-barber-muted) !important;
+}
+
+.vx-text-gradient-gold-bronze {
+  background: linear-gradient(135deg, #fff2b2 0%, #f4c542 45%, #cd7f32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.vx-text-gradient-mustard {
+  background: linear-gradient(135deg, #ffe082 0%, #e5a919 50%, #c5861b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* ---------- Badges ---------- */
+.vx-badge-gold {
+  background: rgba(244, 197, 66, 0.14);
+  color: #ffd966;
+  border: 1px solid rgba(244, 197, 66, 0.35);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.vx-badge-bronze {
+  background: rgba(205, 127, 50, 0.16);
+  color: #f0ad6b;
+  border: 1px solid rgba(205, 127, 50, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.vx-badge-mustard {
+  background: rgba(229, 169, 25, 0.16);
+  color: #fed053;
+  border: 1px solid rgba(229, 169, 25, 0.45);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- Breadcrumb Back Link ---------- */
+.vx-back-link-barber {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--vx-barber-bronze-text);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  background: rgba(205, 127, 50, 0.08);
+  border: 1px solid rgba(205, 127, 50, 0.25);
+  text-decoration: none;
+}
+
+.vx-back-link-barber:hover {
+  color: #fff;
+  background: rgba(229, 169, 25, 0.18);
+  border-color: var(--vx-barber-mustard);
+  transform: translateX(-4px);
+}
+
+/* ---------- Reduced Heading Sizes ---------- */
+.vx-barbershop-page .vx-heading-xl,
+.vx-barbershop-page h1.vx-heading,
+.vx-barbershop-page h1 {
+  font-size: clamp(1.85rem, 3.4vw, 2.7rem) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.02em;
+}
+
+.vx-barbershop-page .vx-heading-lg,
+.vx-barbershop-page h2.vx-heading,
+.vx-barbershop-page h2 {
+  font-size: clamp(1.45rem, 2.5vw, 2.1rem) !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.015em;
+}
+
+.vx-barbershop-page .vx-heading-md {
+  font-size: clamp(1.3rem, 2vw, 1.65rem) !important;
+  line-height: 1.3 !important;
+}
+
+/* ---------- Hero Section (Expanded Full-View Container & Natural Tones) ---------- */
+.vx-barber-hero-section {
+  position: relative;
+  margin-top: -130px;
+  padding-top: 175px;
+  padding-bottom: 7rem;
+  min-height: clamp(750px, 92vh, 1020px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #140d05;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.48) 0%,
+      rgba(0, 0, 0, 0.18) 35%,
+      rgba(0, 0, 0, 0.5) 75%,
+      #140d05 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.52) 45%,
+      rgba(0, 0, 0, 0.15) 75%,
+      transparent 100%
+    ),
+    url('/barberia_imagen.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 991px) {
+  .vx-barber-hero-section {
+    margin-top: -100px;
+    padding-top: 135px;
+    padding-bottom: 4.5rem;
+    min-height: auto;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.72) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        #140d05 100%
+      ),
+      url('/barberia_imagen.webp');
+  }
+}
+
+.vx-barber-hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--vx-barber-champagne);
+  opacity: 0.92;
+  max-width: 840px;
+}
+
+/* Demo Link Callout Box */
+.vx-barber-demo-callout {
+  background: rgba(14, 15, 18, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px dashed rgba(229, 169, 25, 0.45);
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.vx-barber-demo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vx-barber-tag {
+  font-size: 0.84rem;
+  background: rgba(205, 127, 50, 0.15);
+  color: var(--vx-barber-gold-text);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.vx-barber-tag strong {
+  color: #ffffff;
+}
+
+/* Client Stats Card */
+.vx-barber-stats-card {
+  background: linear-gradient(145deg, rgba(34, 24, 11, 0.9) 0%, rgba(20, 14, 6, 0.95) 100%);
+  border: 1px solid rgba(229, 169, 25, 0.3);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(205, 127, 50, 0.1);
+}
+
+.vx-barber-client-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(229, 169, 25, 0.25) 0%, rgba(205, 127, 50, 0.25) 100%);
+  color: var(--vx-barber-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 1px solid rgba(229, 169, 25, 0.45);
+}
+
+.vx-barber-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.vx-barber-stat-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ---------- Custom Bronze & Gold Action Buttons ---------- */
+.vx-btn-barber-primary {
+  background: linear-gradient(135deg, #f4c542 0%, #e5a919 40%, #cd7f32 100%);
+  color: #171005 !important;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 6px 25px rgba(229, 169, 25, 0.35);
+}
+
+.vx-btn-barber-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(229, 169, 25, 0.55);
+  color: #0b0702 !important;
+}
+
+.vx-btn-barber-secondary {
+  background: rgba(205, 127, 50, 0.12);
+  color: var(--vx-barber-gold-text) !important;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(229, 169, 25, 0.4);
+  transition: all 0.3s ease;
+}
+
+.vx-btn-barber-secondary:hover {
+  background: rgba(229, 169, 25, 0.22);
+  color: #ffffff !important;
+  border-color: var(--vx-barber-gold);
+  transform: translateY(-2px);
+}
+
+/* ---------- 4 Pillars Section ---------- */
+.vx-barber-pillars-section {
+  background-color: #140d05;
+  background-image:
+    radial-gradient(ellipse 75% 55% at 50% 50%, rgba(229, 169, 25, 0.04) 0%, transparent 70%),
+    linear-gradient(180deg, #140d05 0%, #171007 50%, #140d05 100%);
+  position: relative;
+}
+
+.vx-barber-pillar-card {
+  background: linear-gradient(145deg, rgba(38, 27, 12, 0.95) 0%, rgba(22, 15, 7, 0.98) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-barber-pillar-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(229, 169, 25, 0.55);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(205, 127, 50, 0.2);
+}
+
+.vx-barber-pillar-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.bg-barber-gold-subtle {
+  background: rgba(244, 197, 66, 0.15);
+  color: #fbd66d;
+}
+
+.bg-barber-bronze-subtle {
+  background: rgba(205, 127, 50, 0.18);
+  color: #f1ab66;
+}
+
+.bg-barber-mustard-subtle {
+  background: rgba(229, 169, 25, 0.18);
+  color: #ffd055;
+}
+
+/* ---------- Services Menu Showcase Section ---------- */
+.vx-barber-services-section {
+  background: linear-gradient(180deg, rgba(16, 11, 4, 0.7) 0%, rgba(24, 16, 7, 0.85) 50%, rgba(16, 11, 4, 0.7) 100%);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.vx-barber-service-item {
+  background: linear-gradient(145deg, rgba(32, 22, 10, 0.7) 0%, rgba(20, 14, 6, 0.85) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.vx-barber-service-item:hover {
+  border-color: rgba(229, 169, 25, 0.45);
+  background: linear-gradient(145deg, rgba(38, 26, 12, 0.85) 0%, rgba(26, 18, 8, 0.95) 100%);
+  transform: translateX(4px);
+}
+
+.vx-barber-service-price {
+  font-family: var(--vx-font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--vx-barber-gold-light);
+  background: rgba(244, 197, 66, 0.1);
+  padding: 4px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(244, 197, 66, 0.25);
+  white-space: nowrap;
+}
+
+/* ---------- Masonry Grid Gallery Section ---------- */
+.vx-barber-masonry-section {
+  background: #0f0a04;
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  position: relative;
+}
+
+.vx-barber-masonry-grid {
+  column-count: 2;
+  column-gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .vx-barber-masonry-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+
+.vx-barber-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 28px;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.vx-barber-masonry-card {
+  background: linear-gradient(145deg, rgba(32, 22, 10, 0.92) 0%, rgba(20, 14, 6, 0.98) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.vx-barber-masonry-item:hover .vx-barber-masonry-card {
+  border-color: rgba(229, 169, 25, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(229, 169, 25, 0.2);
+}
+
+.vx-barber-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #090602;
+}
+
+/* Masonry Visual Placeholder when actual screenshots are pending */
+.vx-barber-placeholder {
+  width: 100%;
+  background: linear-gradient(135deg, #1f1508 0%, #2c1e0c 45%, #191106 100%);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(229, 169, 25, 0.12) 0%, transparent 70%),
+    repeating-linear-gradient(45deg, rgba(205, 127, 50, 0.03) 0, rgba(205, 127, 50, 0.03) 1px, transparent 0, transparent 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-barber-placeholder.aspect-horizontal {
+  min-height: 290px;
+}
+
+.vx-barber-placeholder.aspect-vertical {
+  min-height: 480px;
+}
+
+.vx-barber-placeholder-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(229, 169, 25, 0.2) 0%, rgba(205, 127, 50, 0.2) 100%);
+  color: var(--vx-barber-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  border: 1px solid rgba(229, 169, 25, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(229, 169, 25, 0.15);
+  margin-bottom: 18px;
+  transition: all 0.35s ease;
+}
+
+.vx-barber-masonry-item:hover .vx-barber-placeholder-icon {
+  transform: scale(1.1) rotate(5deg);
+  border-color: var(--vx-barber-mustard);
+  color: #fff;
+}
+
+.vx-barber-placeholder-text {
+  font-family: var(--vx-font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--vx-barber-gold-text);
+  margin-bottom: 6px;
+}
+
+.vx-barber-placeholder-sub {
+  font-size: 0.82rem;
+  color: var(--vx-barber-bronze-text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.vx-barber-dim-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--vx-barber-muted);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.vx-barber-masonry-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 12, 4, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vx-barber-masonry-item:hover .vx-barber-masonry-hover-overlay {
+  opacity: 1;
+}
+
+.vx-barber-zoom-pill {
+  background: linear-gradient(135deg, rgba(34, 24, 10, 0.95) 0%, rgba(20, 14, 5, 0.95) 100%);
+  color: var(--vx-barber-gold-light);
+  padding: 10px 22px;
+  border-radius: 9999px;
+  border: 1px solid rgba(229, 169, 25, 0.6);
+  font-size: 0.92rem;
+  font-weight: 600;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(229, 169, 25, 0.25);
+  transform: translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.vx-barber-masonry-item:hover .vx-barber-zoom-pill {
+  transform: translateY(0);
+}
+
+.vx-barber-masonry-caption {
+  border-top: 1px solid rgba(212, 175, 55, 0.14);
+}
+
+/* ---------- Bottom CTA Section & Banner ---------- */
+.vx-barber-cta-section {
+  background-color: #140d05;
+  background-image:
+    radial-gradient(ellipse 75% 55% at 50% 50%, rgba(229, 169, 25, 0.04) 0%, transparent 70%),
+    linear-gradient(180deg, #140d05 0%, #171007 50%, #140d05 100%);
+  position: relative;
+}
+
+.vx-barber-cta-banner {
+  background: linear-gradient(135deg, #261a0b 0%, #1c1308 50%, #140d05 100%);
+  border: 1px solid rgba(229, 169, 25, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(205, 127, 50, 0.15);
+}
+
+/* ---------- Lightbox Modal ---------- */
+.vx-barber-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 7, 2, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.vx-barber-lightbox-dialog {
+  max-width: 980px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: #191107;
+  border: 1px solid rgba(229, 169, 25, 0.35);
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95), 0 0 40px rgba(229, 169, 25, 0.2);
+  animation: scaleUp 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-barber-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(30, 20, 8, 0.85);
+  border: 1px solid rgba(229, 169, 25, 0.35);
+  color: var(--vx-barber-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.vx-barber-lightbox-close:hover {
+  background: rgba(229, 169, 25, 0.3);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.vx-barber-lightbox-img-box {
+  background: #0d0803;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 65vh;
+  overflow: auto;
+  padding: 40px 20px;
+}
+
+.vx-barber-lightbox-info {
+  background: #191107;
+  border-top: 1px solid rgba(212, 175, 55, 0.16);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
