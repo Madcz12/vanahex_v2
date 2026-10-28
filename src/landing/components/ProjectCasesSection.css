@@ -309,6 +309,10 @@
   color: #a78bfa !important;
 }
 
+.vx-card-category.text-orange {
+  color: #fb923c !important;
+}
+
 .vx-card-title {
   font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 800;

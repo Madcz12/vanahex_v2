@@ -8,38 +8,237 @@
 }
 
 .vx-filter-pill {
-  background: var(--vx-bg-card);
+  background: var(--vx-bg-card, #131a2e);
   border: 1px solid var(--vx-border);
-  color: var(--vx-text-secondary);
-  padding: 6px 16px;
-  border-radius: var(--vx-radius-pill);
-  font-size: 0.85rem;
+  color: var(--vx-text-secondary, #94a3b8);
+  padding: 7px 18px;
+  border-radius: var(--vx-radius-pill, 9999px);
+  font-size: 0.88rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
 }
 
-.vx-filter-pill:hover,
+.vx-filter-pill:hover {
+  background: rgba(45, 212, 168, 0.12);
+  border-color: rgba(45, 212, 168, 0.4);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .vx-filter-pill.active {
-  background: rgba(45, 212, 168, 0.15);
-  border-color: var(--vx-accent-mint);
-  color: #fff;
+  background: var(--vx-accent-mint, #2dd4a8) !important;
+  border-color: var(--vx-accent-mint, #2dd4a8) !important;
+  color: #06192c !important;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(45, 212, 168, 0.35);
 }
 
+/* Masonry Grid Layout */
+.vx-directory-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .vx-directory-masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.vx-directory-masonry-item {
+  width: 100%;
+}
+
+/* Directory Card */
 .vx-directory-card {
-  background: var(--vx-bg-card);
+  background: var(--vx-bg-card, #131a2e);
   border: 1px solid var(--vx-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .vx-directory-card:hover {
-  border-color: rgba(34, 211, 238, 0.35);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 211, 238, 0.08);
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  border-color: rgba(45, 212, 168, 0.4);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65), 0 0 24px rgba(45, 212, 168, 0.12);
 }
 
-.vx-directory-services {
-  background: var(--vx-bg-primary);
+/* Image Showcase at Top */
+.vx-directory-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  background: #080d1a;
+}
+
+@media (max-width: 576px) {
+  .vx-directory-card-img-wrapper {
+    height: 210px;
+  }
+}
+
+.vx-directory-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.vx-directory-card:hover .vx-directory-card-img {
+  transform: scale(1.05);
+}
+
+/* Cenefa (Information Panel at Bottom) */
+.vx-directory-card-cenefa {
+  padding: 24px 26px 26px 26px;
+  background: linear-gradient(180deg, #0e1628 0%, #0a101f 100%);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.vx-directory-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.vx-directory-web-link {
+  color: #fbbf24 !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.vx-directory-web-link:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.vx-directory-subtitle {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+/* Services / Products Box */
+.vx-directory-services-box {
+  background: rgba(7, 12, 23, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.vx-directory-services-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.vx-directory-services-list li {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+}
+
+.vx-directory-service-name {
+  color: #e2e8f0;
+}
+
+.vx-directory-service-price {
+  color: var(--vx-accent-mint, #2dd4a8) !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-left: auto;
+}
+
+/* WhatsApp CTA Button */
+.vx-directory-cta-btn {
+  background: #2dd4a8;
+  color: #08111f !important;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(45, 212, 168, 0.25);
+  width: 100%;
+}
+
+.vx-directory-cta-btn:hover {
+  background: #25be95;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45, 212, 168, 0.45);
+  color: #060e1c !important;
+}
+
+.vx-directory-cta-btn i {
+  font-size: 1.15rem;
+}
+
+/* Empty State Box for Filters Without Registered Businesses */
+.vx-directory-empty-state {
+  background: rgba(11, 17, 32, 0.72);
   border: 1px solid var(--vx-border);
+  border-radius: 20px;
+  padding: 65px 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+}
+
+.vx-directory-empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #64748b;
+  margin: 0 auto;
+}
+
+.vx-directory-empty-title {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.vx-directory-empty-highlight {
+  color: var(--vx-accent-mint, #2dd4a8);
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.vx-directory-empty-highlight:hover {
+  color: #34d399;
+  text-decoration: underline;
+  transform: translateY(-1px);
 }

@@ -163,16 +163,18 @@ export const ProjectCasesSection = () => {
                         <i className="bi bi-arrow-right"></i>
                       </a>
 
-                      <a
-                        href={project.demoUrl || project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="vx-btn-demo"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <span>Ver demo</span>
-                        <i className="bi bi-box-arrow-up-right"></i>
-                      </a>
+                      {(project.demoUrl || project.url) && (
+                        <a
+                          href={project.demoUrl || project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="vx-btn-demo"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <span>Ver demo</span>
+                          <i className="bi bi-box-arrow-up-right"></i>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

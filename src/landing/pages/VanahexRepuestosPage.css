@@ -1,0 +1,613 @@
+/* ==========================================================================
+   VANAHEX V2 — Case Study: VANAHEX Repuestos
+   Theme: High-performance Motorsport / Workshop Titanium Dark
+          with Fiery Flame Orange (#f97316), Racing Amber (#f59e0b)
+          and Cyber Mint accents.
+   Includes Gallery Screens Showcase & Fullscreen Lightbox
+   ========================================================================== */
+
+:root {
+  --vx-rep-bg-dark: #0a0f1d;
+  --vx-rep-bg-card: #11192e;
+  --vx-rep-bg-card-subtle: rgba(17, 25, 46, 0.7);
+  --vx-rep-orange: #f97316;
+  --vx-rep-orange-bright: #fb923c;
+  --vx-rep-orange-deep: #ea580c;
+  --vx-rep-orange-glow: rgba(249, 115, 22, 0.3);
+  --vx-rep-amber: #f59e0b;
+  --vx-rep-amber-glow: rgba(245, 158, 11, 0.25);
+  --vx-rep-border: rgba(249, 115, 22, 0.22);
+  --vx-rep-border-hover: rgba(249, 115, 22, 0.65);
+  --vx-rep-text-primary: #ffffff;
+  --vx-rep-text-secondary: #94a3b8;
+  --vx-rep-text-muted: #64748b;
+}
+
+/* Base Page Wrapper */
+.vx-repuestos-page,
+.vx-repuestos-page.vx-landing-wrapper {
+  background-color: var(--vx-rep-bg-dark) !important;
+  background-image:
+    radial-gradient(ellipse 75% 50% at 15% 10%, rgba(249, 115, 22, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 55% at 85% 65%, rgba(245, 158, 11, 0.1) 0%, transparent 65%),
+    linear-gradient(180deg, #090e1b 0%, #0c1224 45%, #080c17 100%) !important;
+  min-height: 100vh;
+  color: var(--vx-rep-text-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.vx-repuestos-page-content {
+  padding-top: 130px;
+}
+
+@media (max-width: 991px) {
+  .vx-repuestos-page-content {
+    padding-top: 100px;
+  }
+}
+
+/* ---------- Text & Accents in Orange & Amber ---------- */
+.text-rep-orange {
+  color: var(--vx-rep-orange) !important;
+}
+
+.text-rep-amber {
+  color: var(--vx-rep-amber) !important;
+}
+
+.text-rep-muted {
+  color: var(--vx-rep-text-secondary) !important;
+}
+
+.vx-text-gradient-repuestos {
+  color: #ea580c !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #ea580c !important;
+  text-shadow: none !important;
+  filter: none !important;
+  display: inline-block;
+}
+
+/* ---------- Headings ---------- */
+.vx-repuestos-page .vx-heading-xl,
+.vx-repuestos-page h1.vx-heading,
+.vx-repuestos-page h1 {
+  color: #ffffff !important;
+  font-size: clamp(2rem, 3.2vw, 2.85rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em;
+  max-width: 680px;
+  text-shadow: none !important;
+}
+
+.vx-repuestos-page .vx-heading-lg,
+.vx-repuestos-page h2.vx-heading,
+.vx-repuestos-page h2 {
+  color: #ffffff !important;
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem) !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em;
+}
+
+.vx-repuestos-page .vx-heading-md {
+  font-size: clamp(1.35rem, 2vw, 1.75rem) !important;
+  line-height: 1.3 !important;
+}
+
+.vx-repuestos-pillar-title,
+.vx-repuestos-card-heading {
+  color: #ffffff !important;
+}
+
+/* ---------- Badges ---------- */
+.vx-badge-rep-orange {
+  background: rgba(11, 17, 32, 0.94);
+  color: #ffffff !important;
+  border: 1.5px solid #ea580c;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.vx-badge-rep-orange i {
+  color: #ea580c !important;
+}
+
+.vx-badge-rep-amber {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.vx-badge-rep-cyan {
+  background: rgba(6, 182, 212, 0.14);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- Breadcrumb Back Link ---------- */
+.vx-back-link-repuestos {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding: 10px 22px;
+  border-radius: 9999px;
+  background: rgba(17, 25, 46, 0.85);
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+}
+
+.vx-back-link-repuestos:hover {
+  background: var(--vx-rep-orange);
+  border-color: var(--vx-rep-orange);
+  color: #0a0f1d !important;
+  transform: translateX(-4px);
+  box-shadow: 0 6px 20px var(--vx-rep-orange-glow);
+}
+
+/* ---------- Hero Section (with Moto Rep Hero Background Image) ---------- */
+.vx-repuestos-hero-section {
+  position: relative;
+  margin-top: -130px;
+  padding-top: 175px;
+  padding-bottom: 7rem;
+  min-height: clamp(760px, 92vh, 1040px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: transparent;
+  background-image: url('/moto_rep_images/moto_rep_hero.webp');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(249, 115, 22, 0.25);
+}
+
+@media (max-width: 991px) {
+  .vx-repuestos-hero-section {
+    margin-top: -100px;
+    padding-top: 135px;
+    padding-bottom: 5rem;
+    min-height: auto;
+    background-image: url('/moto_rep_images/moto_rep_hero.webp');
+    background-position: center center;
+  }
+}
+
+.vx-repuestos-hero-desc {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #f1f5f9;
+  opacity: 0.98;
+  max-width: 620px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Trust Badges */
+.vx-repuestos-trust-badges span {
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  color: #94a3b8 !important;
+}
+
+/* Demo Callout Box */
+.vx-repuestos-demo-callout {
+  background: rgba(17, 25, 46, 0.88);
+  border: 1px dashed rgba(249, 115, 22, 0.45);
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 620px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.vx-repuestos-demo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vx-repuestos-tag {
+  background: rgba(10, 15, 29, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- Action Buttons ---------- */
+.vx-btn-rep-primary {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 22px rgba(249, 115, 22, 0.45);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.vx-btn-rep-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.65);
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+}
+
+.vx-btn-rep-secondary {
+  background: rgba(17, 25, 46, 0.85);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-btn-rep-secondary:hover {
+  background: rgba(249, 115, 22, 0.15);
+  border-color: var(--vx-rep-orange);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.vx-btn-rep-secondary-dark {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+}
+
+.vx-btn-rep-secondary-dark:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.vx-back-link-rep-dark {
+  background: transparent;
+  color: #cbd5e1 !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 20px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.vx-back-link-rep-dark:hover {
+  color: var(--vx-rep-orange) !important;
+  transform: translateX(-3px);
+}
+
+/* ---------- 4 Pillars Section ---------- */
+.vx-repuestos-pillars-section {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vx-repuestos-pillar-card {
+  background: #11192e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.vx-repuestos-pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 24px rgba(249, 115, 22, 0.15);
+}
+
+.vx-repuestos-pillar-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.bg-rep-orange-subtle {
+  background: rgba(249, 115, 22, 0.15);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+}
+
+.bg-rep-amber-subtle {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.bg-rep-cyan-subtle {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+/* ---------- Gallery Screens Showcase Grid ---------- */
+.vx-repuestos-gallery-section {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vx-repuestos-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .vx-repuestos-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.vx-repuestos-gallery-item {
+  cursor: pointer;
+}
+
+.vx-repuestos-gallery-card {
+  background: #11192e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.vx-repuestos-gallery-item:hover .vx-repuestos-gallery-card {
+  transform: translateY(-6px);
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65), 0 0 30px rgba(249, 115, 22, 0.18);
+}
+
+.vx-repuestos-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  background: #080d19;
+}
+
+@media (max-width: 576px) {
+  .vx-repuestos-img-wrapper {
+    height: 220px;
+  }
+}
+
+.vx-repuestos-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.vx-repuestos-gallery-item:hover .vx-repuestos-gallery-img {
+  transform: scale(1.04);
+}
+
+.vx-repuestos-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 29, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vx-repuestos-gallery-item:hover .vx-repuestos-hover-overlay {
+  opacity: 1;
+}
+
+.vx-repuestos-zoom-pill {
+  background: rgba(249, 115, 22, 0.95);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  display: inline-flex;
+  align-items: center;
+  transform: translateY(8px);
+  transition: transform 0.3s ease;
+}
+
+.vx-repuestos-gallery-item:hover .vx-repuestos-zoom-pill {
+  transform: translateY(0);
+}
+
+.vx-repuestos-gallery-caption {
+  background: linear-gradient(180deg, #11192e 0%, #0d1424 100%);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* ---------- Bottom CTA Banner ---------- */
+.vx-repuestos-cta-section {
+  position: relative;
+  z-index: 2;
+}
+
+.vx-repuestos-cta-banner {
+  background: linear-gradient(135deg, #131c33 0%, #0c1324 100%);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(249, 115, 22, 0.12);
+}
+
+.text-rep-cta-muted {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ---------- Lightbox Modal ---------- */
+.vx-repuestos-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 16, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: vxRepFadeIn 0.25s ease-out;
+}
+
+.vx-repuestos-lightbox-dialog {
+  background: #0f1629;
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  border-radius: 24px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 50px rgba(249, 115, 22, 0.2);
+  animation: vxRepScaleUp 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-repuestos-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.vx-repuestos-lightbox-close:hover {
+  background: var(--vx-rep-orange);
+  border-color: var(--vx-rep-orange);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.vx-repuestos-lightbox-img-box {
+  width: 100%;
+  max-height: 65vh;
+  overflow: hidden;
+  background: #060911;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-repuestos-lightbox-img {
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  object-fit: contain;
+  display: block;
+}
+
+.vx-repuestos-lightbox-info {
+  background: #0f1629;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes vxRepFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes vxRepScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

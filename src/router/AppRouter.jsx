@@ -5,6 +5,7 @@ import {
   MsBarbershopPage,
   FdsMelillaPage,
   VanahexTiendaPage,
+  VanahexRepuestosPage,
 } from '../landing/pages'
 
 export const AppRouter = () => {
@@ -16,6 +17,7 @@ export const AppRouter = () => {
       <Route path="/casos/barberia" element={<MsBarbershopPage />} />
       <Route path="/casos/fds-melilla" element={<FdsMelillaPage />} />
       <Route path="/casos/vanahex-tienda" element={<VanahexTiendaPage />} />
+      <Route path="/casos/vanahex-repuestos" element={<VanahexRepuestosPage />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   )
