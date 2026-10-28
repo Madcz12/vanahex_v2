@@ -1,3 +1,5 @@
 export { LandingPage } from './LandingPage'
 export { VanahexBarraPage } from './VanahexBarraPage'
 export { MsBarbershopPage } from './MsBarbershopPage'
+export { FdsMelillaPage } from './FdsMelillaPage'
+export { VanahexTiendaPage } from './VanahexTiendaPage'

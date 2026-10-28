@@ -1,0 +1,556 @@
+/* ==========================================================================
+   VANAHEX V2 — Case Study: VANAHEX Tienda
+   Theme: Base Tone Wheat (#F5DEB3) with subtle Pumpkin Orange (#FF7518)
+          accents, gradients and ambient glow shadows
+   Includes Gallery Screens Showcase & Fullscreen Lightbox
+   ========================================================================== */
+
+:root {
+  --vx-tienda-wheat: #F5DEB3;
+  --vx-tienda-wheat-light: #fbf1df;
+  --vx-tienda-wheat-dark: #e8caa0;
+  --vx-tienda-orange: #FF7518;
+  --vx-tienda-orange-bright: #ff8c3a;
+  --vx-tienda-orange-deep: #ea580c;
+  --vx-tienda-orange-dark: #c2410c;
+  --vx-tienda-orange-glow: rgba(255, 117, 24, 0.28);
+  --vx-tienda-orange-subtle: rgba(255, 117, 24, 0.12);
+  --vx-tienda-amber: #f59e0b;
+  --vx-tienda-card-bg: rgba(255, 255, 255, 0.88);
+  --vx-tienda-border: rgba(255, 117, 24, 0.25);
+  --vx-tienda-border-hover: rgba(255, 117, 24, 0.65);
+  --vx-tienda-text-primary: #1e150f;
+  --vx-tienda-text-secondary: #5a4536;
+  --vx-tienda-text-muted: #7d6553;
+}
+
+/* Base Page Wrapper with Wheat (#F5DEB3) and Subtle Orange (#FF7518) Glow */
+.vx-tienda-page,
+.vx-tienda-page.vx-landing-wrapper {
+  background-color: var(--vx-tienda-wheat) !important;
+  background-image:
+    radial-gradient(ellipse 85% 55% at 20% 12%, rgba(255, 117, 24, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 65% at 85% 75%, rgba(255, 117, 24, 0.14) 0%, transparent 65%),
+    radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.45) 0%, transparent 70%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 117, 24, 0.06) 35%, rgba(245, 222, 179, 0.7) 70%, rgba(235, 206, 154, 0.95) 100%),
+    linear-gradient(180deg, #faebd7 0%, #F5DEB3 30%, #ecd0a1 70%, #F5DEB3 100%) !important;
+  box-shadow: inset 0 0 160px rgba(255, 117, 24, 0.08) !important;
+  min-height: 100vh;
+  color: var(--vx-tienda-text-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.vx-tienda-page-content {
+  padding-top: 130px;
+}
+
+@media (max-width: 991px) {
+  .vx-tienda-page-content {
+    padding-top: 100px;
+  }
+}
+
+/* ---------- Text & Accents in Orange & Wheat-Adapted Dark ---------- */
+.text-tienda-orange {
+  color: var(--vx-tienda-orange) !important;
+}
+
+.text-tienda-amber {
+  color: #d97706 !important;
+}
+
+.text-tienda-muted {
+  color: var(--vx-tienda-text-muted) !important;
+}
+
+.vx-text-gradient-tienda {
+  background: linear-gradient(135deg, #b93800 0%, #ea580c 35%, #FF7518 70%, #9a3412 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* ---------- Headings Override for Contrast against Wheat Base ---------- */
+.vx-tienda-page .vx-heading-xl,
+.vx-tienda-page h1.vx-heading,
+.vx-tienda-page h1 {
+  color: var(--vx-tienda-text-primary) !important;
+  font-size: clamp(1.75rem, 2.7vw, 2.35rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em;
+  max-width: 560px;
+}
+
+.vx-tienda-page .vx-heading-lg,
+.vx-tienda-page h2.vx-heading,
+.vx-tienda-page h2 {
+  color: var(--vx-tienda-text-primary) !important;
+  font-size: clamp(1.45rem, 2.5vw, 2.1rem) !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.015em;
+}
+
+.vx-tienda-page .vx-heading-md {
+  font-size: clamp(1.3rem, 2vw, 1.65rem) !important;
+  line-height: 1.3 !important;
+}
+
+.vx-tienda-pillar-title,
+.vx-tienda-card-heading {
+  color: var(--vx-tienda-text-primary) !important;
+}
+
+/* ---------- Badges ---------- */
+.vx-badge-tienda-orange {
+  background: rgba(255, 117, 24, 0.12);
+  color: #b93800;
+  border: 1px solid rgba(255, 117, 24, 0.45);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(255, 117, 24, 0.15);
+}
+
+.vx-badge-tienda-amber {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- Breadcrumb Back Link ---------- */
+.vx-back-link-tienda {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #453122;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 117, 24, 0.35);
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(180, 80, 10, 0.06);
+}
+
+.vx-back-link-tienda:hover {
+  color: #ffffff;
+  background: var(--vx-tienda-orange);
+  border-color: var(--vx-tienda-orange);
+  transform: translateX(-4px);
+  box-shadow: 0 4px 16px rgba(255, 117, 24, 0.35);
+}
+
+/* ---------- Hero Section (Expanded Full-View Container & Alimentación Plaza Image Background) ---------- */
+.vx-tienda-hero-section {
+  position: relative;
+  margin-top: -130px;
+  padding-top: 175px;
+  padding-bottom: 6.5rem;
+  min-height: clamp(750px, 92vh, 1020px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #F5DEB3;
+  background-image: url('/alimentacion_plaza/ali_plaza_bg.webp');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(255, 117, 24, 0.2);
+}
+
+@media (max-width: 991px) {
+  .vx-tienda-hero-section {
+    margin-top: -100px;
+    padding-top: 135px;
+    padding-bottom: 4.5rem;
+    min-height: auto;
+    background-image: url('/alimentacion_plaza/ali_plaza_bg.webp');
+    background-position: center center;
+  }
+}
+
+.vx-tienda-hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--vx-tienda-text-secondary);
+  opacity: 0.98;
+  max-width: 540px;
+}
+
+/* Trust Badges */
+.vx-tienda-trust-badges span {
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  color: #553e2d !important;
+}
+
+/* Demo Callout Box */
+.vx-tienda-demo-callout {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(254, 247, 237, 0.96) 100%);
+  border: 1px dashed rgba(255, 117, 24, 0.55);
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 10px 28px rgba(180, 80, 10, 0.08), 0 0 20px rgba(255, 117, 24, 0.08);
+  max-width: 540px;
+}
+
+.vx-tienda-demo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vx-tienda-tag {
+  font-size: 0.84rem;
+  background: rgba(255, 117, 24, 0.12);
+  color: #9a3412;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 117, 24, 0.35);
+  font-weight: 500;
+}
+
+.vx-tienda-tag strong {
+  color: #1e150f;
+}
+
+/* ---------- Action Buttons with Orange & Warm Highlights ---------- */
+.vx-btn-tienda-primary {
+  background: linear-gradient(135deg, #FF7518 0%, #ea580c 45%, #c2410c 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 6px 24px rgba(255, 117, 24, 0.38);
+}
+
+.vx-btn-tienda-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(255, 117, 24, 0.55), 0 0 20px rgba(255, 140, 58, 0.35);
+  color: #ffffff !important;
+}
+
+.vx-btn-tienda-secondary {
+  background: rgba(255, 255, 255, 0.85);
+  color: #7c2d12 !important;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 117, 24, 0.45);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(180, 80, 10, 0.05);
+}
+
+.vx-btn-tienda-secondary:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #ea580c !important;
+  border-color: var(--vx-tienda-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 117, 24, 0.2);
+}
+
+/* Secondary Button for Dark CTA */
+.vx-btn-tienda-secondary-dark {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 117, 24, 0.45);
+  transition: all 0.3s ease;
+}
+
+.vx-btn-tienda-secondary-dark:hover {
+  background: rgba(255, 117, 24, 0.25);
+  color: #ffffff !important;
+  border-color: var(--vx-tienda-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 117, 24, 0.3);
+}
+
+.vx-back-link-tienda-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fed7aa;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  background: rgba(255, 117, 24, 0.1);
+  border: 1px solid rgba(255, 117, 24, 0.3);
+  text-decoration: none;
+}
+
+.vx-back-link-tienda-dark:hover {
+  color: #ffffff;
+  background: rgba(255, 117, 24, 0.25);
+  border-color: var(--vx-tienda-orange);
+  transform: translateX(-4px);
+}
+
+/* ---------- 4 Pillars Section ---------- */
+.vx-tienda-pillars-section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.28);
+  border-top: 1px solid rgba(255, 117, 24, 0.18);
+  border-bottom: 1px solid rgba(255, 117, 24, 0.18);
+}
+
+.vx-tienda-pillar-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(254, 247, 237, 0.96) 100%);
+  border: 1px solid rgba(255, 117, 24, 0.22);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 10px 26px rgba(180, 80, 10, 0.06);
+}
+
+.vx-tienda-pillar-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 117, 24, 0.65);
+  box-shadow: 0 16px 38px rgba(180, 80, 10, 0.12), 0 0 25px rgba(255, 117, 24, 0.16);
+}
+
+.vx-tienda-pillar-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.bg-tienda-orange-subtle {
+  background: rgba(255, 117, 24, 0.14);
+}
+
+.bg-tienda-amber-subtle {
+  background: rgba(245, 158, 11, 0.16);
+}
+
+/* ---------- Gallery Screens Showcase Section ---------- */
+.vx-tienda-gallery-section {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 117, 24, 0.18);
+}
+
+.vx-tienda-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .vx-tienda-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.vx-tienda-gallery-item {
+  cursor: pointer;
+  width: 100%;
+}
+
+.vx-tienda-gallery-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(254, 247, 237, 0.98) 100%);
+  border: 1px solid rgba(255, 117, 24, 0.22);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 12px 32px rgba(180, 80, 10, 0.08);
+}
+
+.vx-tienda-gallery-item:hover .vx-tienda-gallery-card {
+  border-color: rgba(255, 117, 24, 0.65);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(180, 80, 10, 0.16), 0 0 30px rgba(255, 117, 24, 0.2);
+}
+
+.vx-tienda-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #1e150f;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-tienda-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-tienda-gallery-item:hover .vx-tienda-gallery-img {
+  transform: scale(1.03);
+}
+
+.vx-tienda-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 16, 10, 0.62);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vx-tienda-gallery-item:hover .vx-tienda-hover-overlay {
+  opacity: 1;
+}
+
+.vx-tienda-zoom-pill {
+  background: linear-gradient(135deg, rgba(35, 22, 14, 0.95) 0%, rgba(20, 12, 7, 0.95) 100%);
+  color: #fed7aa;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 117, 24, 0.6);
+  font-size: 0.92rem;
+  font-weight: 600;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6), 0 0 18px rgba(255, 117, 24, 0.3);
+  transform: translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.vx-tienda-gallery-item:hover .vx-tienda-zoom-pill {
+  transform: translateY(0);
+}
+
+.vx-tienda-gallery-caption {
+  border-top: 1px solid rgba(255, 117, 24, 0.16);
+}
+
+/* ---------- Bottom CTA Banner ---------- */
+.vx-tienda-cta-section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.vx-tienda-cta-banner {
+  background: linear-gradient(135deg, #28190f 0%, #1e120a 50%, #150c06 100%);
+  border: 1px solid rgba(255, 117, 24, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 117, 24, 0.22), 0 0 20px rgba(245, 222, 179, 0.15);
+}
+
+.text-tienda-cta-muted {
+  color: #fed7aa;
+  opacity: 0.9;
+}
+
+/* ---------- Lightbox Modal ---------- */
+.vx-tienda-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 12, 7, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.vx-tienda-lightbox-dialog {
+  max-width: 1040px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: #1e130a;
+  border: 1px solid rgba(255, 117, 24, 0.45);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 117, 24, 0.2);
+  animation: scaleUp 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.vx-tienda-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(35, 22, 13, 0.85);
+  border: 1px solid rgba(255, 117, 24, 0.35);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.vx-tienda-lightbox-close:hover {
+  background: rgba(255, 117, 24, 0.3);
+  border-color: var(--vx-tienda-orange);
+  transform: rotate(90deg);
+}
+
+.vx-tienda-lightbox-img-box {
+  background: #0e0905;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.vx-tienda-lightbox-img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+
+.vx-tienda-lightbox-info {
+  background: #1e130a;
+  border-top: 1px solid rgba(255, 117, 24, 0.2);
+}
