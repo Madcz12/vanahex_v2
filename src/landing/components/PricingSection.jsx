@@ -22,7 +22,7 @@ export const PricingSection = () => {
             </span>
           </div>
 
-          <div className="d-flex flex-wrap justify-content-center gap-4 text-muted small mt-3">
+          <div className="d-flex flex-wrap justify-content-center gap-4 text-white small mt-3">
             {paymentMethods.map((pm, idx) => (
               <span key={idx} className="d-flex align-items-center gap-1">
                 <i className={`bi ${pm.icon} text-mint`}></i>

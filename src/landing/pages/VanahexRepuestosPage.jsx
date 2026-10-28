@@ -19,6 +19,8 @@ export const VanahexRepuestosPage = () => {
   const whatsappUrl =
     'https://wa.me/34614138144?text=Hola%20VANAHEX,%20me%20interesa%20el%20software%20VANAHEX%20Repuestos%20para%20mi%20taller%20o%20tienda%20de%20motos'
 
+  const demoUrl = 'https://repuestos-demo.vanahex.lat/'
+
   // Gallery Screens from public/moto_rep_images
   const screens = [
     {
@@ -129,13 +131,23 @@ export const VanahexRepuestosPage = () => {
                 {/* Primary Actions */}
                 <div className="d-flex flex-wrap gap-3 align-items-center mb-4">
                   <a
-                    href={whatsappUrl}
+                    href={demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="vx-btn-rep-primary"
                   >
+                    <i className="bi bi-box-arrow-up-right"></i>
+                    <span>Ver demo en vivo</span>
+                  </a>
+
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="vx-btn-rep-secondary"
+                  >
                     <i className="bi bi-whatsapp"></i>
-                    <span>Solicitar demo y presupuesto</span>
+                    <span>Pedir presupuesto</span>
                   </a>
 
                   <a href="/#planes" className="vx-btn-rep-secondary">
@@ -283,13 +295,22 @@ export const VanahexRepuestosPage = () => {
               </p>
               <div className="d-flex flex-wrap justify-content-center gap-3">
                 <a
-                  href={whatsappUrl}
+                  href={demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="vx-btn-rep-primary"
                 >
+                  <i className="bi bi-box-arrow-up-right"></i>
+                  <span>Probar demo en vivo</span>
+                </a>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="vx-btn-rep-secondary-dark"
+                >
                   <i className="bi bi-whatsapp"></i>
-                  <span>Solicitar demo por WhatsApp</span>
+                  <span>Pedir presupuesto por WhatsApp</span>
                 </a>
                 <a href="/#planes" className="vx-btn-rep-secondary-dark">
                   <i className="bi bi-tag-fill"></i>
