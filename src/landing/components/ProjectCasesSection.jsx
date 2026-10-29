@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import { projectCases } from '../data'
 import './ProjectCasesSection.css'
 
@@ -154,14 +155,14 @@ export const ProjectCasesSection = () => {
 
                     {/* Right: "Ver caso" & "Ver demo" HTML buttons */}
                     <div className="vx-card-actions">
-                      <a
-                        href={project.caseUrl || `/casos/${project.slug}`}
+                      <Link
+                        to={project.caseUrl || `/casos/${project.slug}`}
                         className="vx-btn-case"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <span>Ver caso</span>
                         <i className="bi bi-arrow-right"></i>
-                      </a>
+                      </Link>
 
                       {(project.demoUrl || project.url) && (
                         <a
