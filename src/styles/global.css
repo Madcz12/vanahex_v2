@@ -61,6 +61,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset for fixed navbar on all targeted sections & anchors */
+section[id],
+div[id],
+.vx-section,
+.vx-hero {
+  scroll-margin-top: 90px;
+}
+
 body {
   font-family: var(--vx-font-body);
   background-color: var(--vx-bg-primary);
@@ -327,13 +335,128 @@ img {
   flex-shrink: 0;
 }
 
-/* ---------- Divider ---------- */
+/* ---------- Dividers & Smooth Section Transitions ---------- */
 .vx-divider {
   border: none;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--vx-border), transparent);
   margin: 0;
 }
+
+/* Section scroll transition entrance */
+.vx-section-transition {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+  position: relative;
+}
+
+.vx-section-transition.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  .vx-section-transition {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Elegant Luminous Section Dividers */
+.vx-section-divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(30, 43, 72, 0.4) 15%,
+    rgba(34, 211, 238, 0.35) 50%,
+    rgba(45, 212, 168, 0.3) 65%,
+    rgba(30, 43, 72, 0.4) 85%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.vx-divider-mint {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(30, 43, 72, 0.4) 15%,
+    rgba(45, 212, 168, 0.45) 50%,
+    rgba(34, 211, 238, 0.3) 70%,
+    rgba(30, 43, 72, 0.4) 85%,
+    transparent 100%
+  );
+}
+
+.vx-divider-cyan {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(30, 43, 72, 0.4) 15%,
+    rgba(34, 211, 238, 0.45) 50%,
+    rgba(59, 130, 246, 0.3) 70%,
+    rgba(30, 43, 72, 0.4) 85%,
+    transparent 100%
+  );
+}
+
+.vx-divider-purple {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(30, 43, 72, 0.4) 15%,
+    rgba(139, 92, 246, 0.45) 50%,
+    rgba(34, 211, 238, 0.3) 70%,
+    rgba(30, 43, 72, 0.4) 85%,
+    transparent 100%
+  );
+}
+
+.vx-section-divider-glow {
+  position: absolute;
+  width: clamp(240px, 40vw, 480px);
+  height: 20px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(34, 211, 238, 0.18) 0%,
+    rgba(45, 212, 168, 0.08) 50%,
+    transparent 75%
+  );
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.vx-divider-purple .vx-section-divider-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(139, 92, 246, 0.22) 0%,
+    rgba(34, 211, 238, 0.08) 50%,
+    transparent 75%
+  );
+}
+
+.vx-divider-mint .vx-section-divider-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(45, 212, 168, 0.22) 0%,
+    rgba(34, 211, 238, 0.08) 50%,
+    transparent 75%
+  );
+}
+
 
 /* ---------- Responsive Container & Expanded Section Widths ---------- */
 /* Expands section containers to stretch outwards, giving much more space inside each section */
