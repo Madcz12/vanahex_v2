@@ -60,9 +60,7 @@ export const LandingPage = () => {
     <div className="vx-landing-wrapper">
       <Navbar />
       <main>
-        <div className="vx-section-transition is-visible">
-          <HeroSection />
-        </div>
+        <HeroSection />
 
         <SectionDivider variant="mint" />
 

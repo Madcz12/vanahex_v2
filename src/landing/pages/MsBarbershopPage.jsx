@@ -6,8 +6,9 @@ import './MsBarbershopPage.css'
 export const MsBarbershopPage = () => {
   const [selectedItem, setSelectedItem] = useState(null)
 
-  // Close lightbox on Escape key
+  // Reset scroll to hero & close lightbox on Escape key
   useEffect(() => {
+    window.scrollTo(0, 0)
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') setSelectedItem(null)
     }
